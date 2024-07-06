@@ -13,7 +13,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 # You need to already have a Role named "expense-pod-reader" in that namespace.
 kind: RoleBinding
 metadata:
-  name: read-pods
+  name: expense-pod-reader
   namespace: expense
 subjects:
 # You can specify more than one "subject"
