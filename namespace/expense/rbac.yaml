@@ -31,6 +31,7 @@ kind: ClusterRole
 metadata:
   # "namespace" omitted since ClusterRoles are not namespaced
   name: expense-cluster-reader
+  namespace: expense
 rules:
 - apiGroups: [""]
   # at the HTTP level, the name of the resource for accessing Secret
@@ -43,6 +44,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: expense-cluster-reader
+  namespace: expense
 subjects:
 - kind: User
   name: harish # Name is case sensitive
